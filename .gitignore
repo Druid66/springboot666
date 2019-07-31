@@ -21,7 +21,7 @@ target/
 /target/
 *.md
 /.mvn/
-mvnw.cwd
+mvnw.cmd
 mvnw
 ### NetBeans ###
 /nbproject/private/
