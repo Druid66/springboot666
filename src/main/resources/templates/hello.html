@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    hello,thymeleaf!
+    <hr>
+    <span th:text="${username}">坦普森</span><br>
+    <span th:text="马云+${username}">汤普森</span><br>
+    <span th:text="|欢迎，${username}|">汤普森</span><br>
+    <hr>
+    username:<span th:text="${student.username}"></span>
+    <hr>
+    password:<span th:text="${student.password}"></span>
+    <hr>
+    <span th:if="${money>800}">土豪</span>
+    <hr>
+    <span th:text="${money>1000? '土豪':'穷人'}"></span>
+    <hr>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>姓名</td>
+            <td>密码</td>
+        </tr>
+        <tr th:each="stu : ${stuList}">
+            <td th:text="${stu.id}">id</td>
+            <td th:text="${stu.username}">姓名</td>
+            <td th:text="${stu.password}">密码</td>
+        </tr>
+    </table>
+    <hr>
+    <input th:value="${#dates.format(dates,'yyyy-MM-dd HH:mm:ss')}"/>
+</body>
+</html>
